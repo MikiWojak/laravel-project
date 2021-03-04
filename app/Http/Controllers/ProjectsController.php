@@ -10,8 +10,6 @@ class ProjectsController extends Controller
     public function index() {
       $projects = Project::all();
 
-      return $projects;
-
-      return view('projects.index');
+      return view('projects.index', ['projects' => $projects]);
     }
 }
