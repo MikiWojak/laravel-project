@@ -7,7 +7,10 @@
   <body>
     <h1>Create a New Project</h1>
 
-    <form>
+    <form action="/projects" method="post">
+      <!-- Must-have when parse data in Laravel -->
+      {{ csrf_field() }}
+
       <div>
         <input type="text" name="title" placeholder="Project title">
       </div>

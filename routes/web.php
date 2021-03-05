@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/projects', 'App\Http\Controllers\ProjectsController@index');
+Route::post('/projects', 'App\Http\Controllers\ProjectsController@store');
 Route::get('/projects/create', 'App\Http\Controllers\ProjectsController@create');
