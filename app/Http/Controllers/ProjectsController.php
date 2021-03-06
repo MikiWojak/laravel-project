@@ -22,15 +22,17 @@ class ProjectsController extends Controller
     }
 
     public function update() {
-
+      dd(request()->all());
     }
 
     public function destroy() {
 
     }
 
-    public function edit() {
-      
+    public function edit($id) {
+      $project = Project::find($id);
+
+      return view('projects.edit', compact('project'));
     }
 
     public function store() {
