@@ -20,4 +20,13 @@
       <button type="submit">Update Project</button>
     </div>
   </form>
+
+  <form action="/projects/{{ $project->id }}" method="POST">
+    <div>
+      {{ method_field('DELETE') }}
+      {{ csrf_field() }}
+
+      <button type="submit">Delete Project</button>
+    </div>
+  </form>
 @endsection
