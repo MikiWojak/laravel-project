@@ -33,13 +33,13 @@ class ProjectsController extends Controller
     }
 
     public function destroy($id) {
-      $project = Project::find($id)->delete();
+      $project = Project::findOrFail($id)->delete();
 
       return redirect('/projects');
     }
 
     public function edit($id) {
-      $project = Project::find($id);
+      $project = Project::findOrFail($id);
 
       return view('projects.edit', compact('project'));
     }
